@@ -1,0 +1,49 @@
+{"logLevel":"debug","message":"multithreading is set to false"}
+{"logLevel":"debug","message":"Using reflection to scan dependencies for gauge implementations..."}
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+{"logLevel":"debug","message":"gauge-java took 1448milliseconds to load and scan. This should be less than 'runner_connection_timeout' config value."}
+{"logLevel":"debug","message":"run 'gauge config runner_connection_timeout' and verify that it is < 1448"}
+{"logLevel":"debug","message":"starting gRPC server..."}
+{"logLevel":"debug","message":"started gRPC server on port 54218"}
+{"logLevel":"info","message":"Listening on port:54218"}
+{"logLevel":"debug","message":"Scanning packages for steps"}
+{"logLevel":"debug","message":"Comparing 'com.step.StepImpl.delete' and 'com.step.StepImpl.delete'"}
+{"logLevel":"debug","message":"Found Delete Request  : PetId: {} in current project scope."}
+{"logLevel":"debug","message":"Comparing 'com.step.StepImpl.put' and 'com.step.StepImpl.put'"}
+{"logLevel":"debug","message":"Found Put Request  : PetId: {} ve name: {} in current project scope."}
+{"logLevel":"debug","message":"Comparing 'com.step.StepImpl.get' and 'com.step.StepImpl.get'"}
+{"logLevel":"debug","message":"Found Get Request  : PetId: {} in current project scope."}
+{"logLevel":"debug","message":"Comparing 'com.step.StepImpl.post' and 'com.step.StepImpl.post'"}
+{"logLevel":"debug","message":"Found Post Request : PetId: {} ve name: {} in current project scope."}
+{"logLevel":"debug","message":"Scanning packages for hooks"}
+{"logLevel":"debug","message":"Scanned steps (using static parsing + reflections): "}
+{"logLevel":"debug","message":"\tPut Request  : PetId: {} ve name: {} : public ApiResponse put(String id, String name)"}
+{"logLevel":"debug","message":"\tDelete Request  : PetId: {} : public ApiResponse delete(String id)"}
+{"logLevel":"debug","message":"\tPost Request : PetId: {} ve name: {} : public ApiResponse post(String id, String name)"}
+{"logLevel":"debug","message":"\tGet Request  : PetId: {} : public ApiResponse get(String id)"}
+{"logLevel":"debug","message":"Executing 'Post Request : PetId: {} ve name: {}' using 'class com.step.StepImpl.post"}
+Post PetId : 99
+Post Name : bobo
+****************
+{"logLevel":"debug","message":"Executing 'Get Request  : PetId: {}' using 'class com.step.StepImpl.get"}
+Get PetId : 99
+Get Name : bobo
+****************
+{"logLevel":"debug","message":"Executing 'Put Request  : PetId: {} ve name: {}' using 'class com.step.StepImpl.put"}
+Put PetId : 999
+Put Name : bobo
+****************
+{"logLevel":"debug","message":"Executing 'Delete Request  : PetId: {}' using 'class com.step.StepImpl.delete"}
+Delete PetId : 0
+PetId not found
+****************
+{"logLevel":"debug","message":"Executing 'Delete Request  : PetId: {}' using 'class com.step.StepImpl.delete"}
+Delete PetId : 0
+PetId not found
+****************
+{"logLevel":"debug","message":"Killing Java runner..."}
+{"logLevel":"debug","message":"Stopping execution pool..."}
+{"logLevel":"debug","message":"Shutting down grpc server..."}
+{"logLevel":"debug","message":"Runner killed gracefully."}
